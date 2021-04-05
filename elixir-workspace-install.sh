@@ -1,9 +1,18 @@
-sudo apt-get install build-essential git wget libssl-dev libreadline-dev libncurses5-dev zlib1g-dev m4 curl wx-common libwxgtk3.0-dev autoconf
+sudo apt update
+sudo apt install build-essential git automake autoconf libreadline-dev libncurses-dev libssl-dev libyaml-dev libxslt-dev libffi-dev libtool unixodbc-dev unzip curl zlib1g-dev sqlite3 libsqlite3-dev -y
+sudo apt install libncurses5-dev -y
+sudo apt install xsltproc -y
+sudo apt install fop -y
+sudo apt install xmllint -y
 
-sudo apt install git
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch
-echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bash_profile
-echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bash_profile
+sudo apt install git -y
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+cd ~/.asdf
+git checkout "$(git describe --abbrev=0 --tags)"
+echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
+echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
+
+source ~/.bashrc
 
 asdf plugin-add elixir
 asdf install elixir 1.11.4
@@ -14,3 +23,5 @@ asdf plugin-add erlang
 asdf install erlang 23.3
 asdf global erlang 23.3
 asdf local erlang 23.3
+
+mix archive.install hex phx_new
