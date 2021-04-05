@@ -2,8 +2,6 @@ sudo apt update
 sudo apt install build-essential git automake autoconf libreadline-dev libncurses-dev libssl-dev libyaml-dev libxslt-dev libffi-dev libtool unixodbc-dev unzip curl zlib1g-dev sqlite3 libsqlite3-dev -y
 sudo apt install libncurses5-dev -y
 sudo apt install xsltproc -y
-sudo apt install fop -y
-sudo apt install xmllint -y
 
 sudo apt install git -y
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
@@ -21,6 +19,7 @@ sudo apt-get -y install postgresql
 echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
 echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 source ~/.bashrc
+source ~/.zshrc
 
 asdf plugin-add elixir
 asdf install elixir 1.11.4
