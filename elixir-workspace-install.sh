@@ -32,5 +32,5 @@ asdf install erlang 23.3
 asdf global erlang 23.3
 asdf local erlang 23.3
 
-mix archive.install hex phx_new
+mix archive.install hex phx_new 
 
