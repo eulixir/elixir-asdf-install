@@ -22,9 +22,9 @@ source ~/.bashrc
 source ~/.zshrc
 
 asdf plugin-add elixir
-asdf install elixir 1.11.4
-asdf local elixir 1.11.4
-asdf global elixir 1.11.4
+asdf install elixir 1.12.1
+asdf local elixir 1.12.1
+asdf global elixir 1.12.1
 
 asdf plugin-add erlang
 asdf install erlang 23.3
