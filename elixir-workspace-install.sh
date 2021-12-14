@@ -12,13 +12,11 @@ source ~/.zshrc
 
 asdf plugin-add elixir
 asdf install elixir 1.12.3
-asdf local elixir 1.12.3
 asdf global elixir 1.12.3
 
 asdf plugin-add erlang
 asdf install erlang 24.0
 asdf global erlang 24.0
-asdf local erlang 24.0
 
 mix archive.install hex phx_new 
 
