@@ -8,6 +8,9 @@ git checkout "$(git describe --abbrev=0 --tags)"
 echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
 echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 source ~/.bashrc
+
+echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.zshrc
+echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.zshrc
 source ~/.zshrc
 
 asdf plugin-add elixir
@@ -19,4 +22,13 @@ asdf install erlang 24.0
 asdf global erlang 24.0
 
 mix archive.install hex phx_new 
+
+sudo apt update
+sudo apt remove docker docker-engine docker.io
+sudo apt install docker.io
+
+sudo systemctl start docker
+sudo systemctl enable docker
+
+docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
 
